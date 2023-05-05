@@ -1,0 +1,3 @@
+[submodule "bfg"]
+	path = bfg
+	url = git@github.com:yinxiangming/bfg.git
