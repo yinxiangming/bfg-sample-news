@@ -15,7 +15,7 @@ from pathlib import Path
 
 # BFG related settings
 # Load environment variables from .env file
-dotenv.load_dotenv()
+dotenv.load_dotenv('env/.env.local')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'bfg_sample_news.wsgi.application'
 
 DATABASES = {
     # connect to postgresql database
-    'default': os.environ.get('DATABASE_URL')
+    'default': os.getenv('DATABASE_URL')
 }
 
 
