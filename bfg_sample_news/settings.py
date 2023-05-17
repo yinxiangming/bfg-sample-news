@@ -36,7 +36,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bfg.appa',
     'bfg.landing',
+    'bfg.message',
+    'bfg.store',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,7 +85,14 @@ WSGI_APPLICATION = 'bfg_sample_news.wsgi.application'
 
 DATABASES = {
     # connect to postgresql database
-    'default': os.getenv('DATABASE_URL')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'news',
+        'USER': 'news',
+        'PASSWORD': 'bfgsaveyourtime',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 
