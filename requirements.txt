@@ -1,5 +1,7 @@
 # BFG Basic
 django~=4.2.1
+Pillow==9.5.0
+pyyaml~=6.0
 python-dotenv==1.0.0
 html2text~=2020.1.16
 six==1.16.0

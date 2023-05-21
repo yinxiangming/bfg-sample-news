@@ -1,0 +1,4 @@
+# Create YML file with the following content:
+
+model:
+#  - multi_tenant: true
