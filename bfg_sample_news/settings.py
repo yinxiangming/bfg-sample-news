@@ -14,8 +14,9 @@ import dotenv
 from pathlib import Path
 
 # BFG related settings
+env = os.environ.get('ENV', 'local')
 # Load environment variables from .env file
-dotenv.load_dotenv('env/.env.local')
+dotenv.load_dotenv(f'env/.env.{env}')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bfg.core',
-    # 'bfg.appa',
+    'bfg.appa',
     # 'bfg.landing',
     # 'bfg.message',
     # 'bfg.store',
@@ -86,7 +87,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'news',
-        'USER': 'news',
+        'USER': 'postgres',
         'PASSWORD': 'bfgsaveyourtime',
         'HOST': 'localhost',
         'PORT': '5432',

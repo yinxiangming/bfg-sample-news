@@ -1,4 +1,6 @@
-
+[]: # File: README.md
+[]: # Project: bfg-sample-news
+[]: # Created Date: Friday, October 4th 2019, 8:14:09 pm
 # News AI with BFG
 
 `Bfg-sample-news` is a news site built using the BFG project's `landing` and `appa` modules. The `landing` module provides the functionality for displaying and publishing news articles, while the `appa` module provides an admin panel for site administrators to manage the content and settings of the site.
