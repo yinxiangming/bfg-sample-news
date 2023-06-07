@@ -82,16 +82,13 @@ WSGI_APPLICATION = 'bfg_sample_news.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import dj_database_url
+
+db_from_env = dj_database_url.config(env="DB_STRING", conn_max_age=500)
+
 DATABASES = {
     # connect to postgresql database
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'news',
-        'USER': 'postgres',
-        'PASSWORD': 'bfgsaveyourtime',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': db_from_env
 }
 
 # Password validation
