@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bfg.core',
     'bfg.appa',
-    # 'bfg.landing',
+    'bfg.landing',
     # 'bfg.message',
     # 'bfg.store',
 ]
