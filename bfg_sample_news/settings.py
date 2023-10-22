@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
-import dotenv
 from pathlib import Path
+
+import dotenv
 
 # BFG related settings
 env = os.environ.get('ENV', 'local')
@@ -45,7 +46,7 @@ INSTALLED_APPS = [
     'bfg.appa',
     'bfg.landing',
     # 'bfg.message',
-    # 'bfg.store',
+    'bfg.store',
 ]
 
 MIDDLEWARE = [
